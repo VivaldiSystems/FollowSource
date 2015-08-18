@@ -1,0 +1,12 @@
+﻿[DataSource1]
+Visible=False
+
+[ADOQuery1]
+Visible=False
+
+[ADOQuery2]
+Visible=False
+
+[GridViewForm.ADOQuery3]
+Visible=False
+

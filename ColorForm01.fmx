@@ -1,0 +1,210 @@
+object ColorForm: TColorForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biHelp]
+  BorderStyle = bsSingle
+  Caption = 'Class Management'
+  ClientHeight = 660
+  ClientWidth = 901
+  Fill.Kind = bkSolid
+  Position = poScreenCenter
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  object ToolBar1: TToolBar
+    Height = 40.000000000000000000
+    Width = 901.000000000000000000
+    object Label1: TLabel
+      Font.Size = 28.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 36.000000000000000000
+      Position.X = 7.000000000000000000
+      Text = 'Color Management'
+      Width = 265.000000000000000000
+    end
+    object SpeedButton1: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 416.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Add'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 528.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Remove'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton2Click
+    end
+    object SpeedButton3: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 656.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Save'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton3Click
+    end
+    object SpeedButton4: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      Font.Style = [fsBold]
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 792.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Close'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton4Click
+    end
+  end
+  object ItemTitle2: TLabel
+    Anchors = []
+    AutoSize = True
+    Font.Family = 'Arial'
+    Font.Size = 18.000000000000000000
+    Font.Style = [fsBold]
+    FontColor = claNull
+    StyledSettings = [ssFontColor]
+    Height = 25.000000000000000000
+    Padding.Top = 5.000000000000000000
+    Position.X = 122.500000000000000000
+    Position.Y = 472.000000000000000000
+    Text = 'Color Code:'
+    TextAlign = taTrailing
+    Width = 107.000000000000000000
+    WordWrap = False
+  end
+  object Edit10: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 248.000000000000000000
+    Position.Y = 504.000000000000000000
+    Width = 481.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Edit1: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 248.000000000000000000
+    Position.Y = 464.000000000000000000
+    Width = 33.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Grid1: TGrid
+    Touch.InteractiveGestures = [igPan]
+    Height = 377.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 56.000000000000000000
+    Width = 865.000000000000000000
+    ReadOnly = True
+    RowCount = 0
+    RowHeight = 21.000000000000000000
+    object TStringColumn
+      Header = 'CODE'
+      Height = 352.000000000000000000
+      Width = 50.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Color'
+      Height = 352.000000000000000000
+      Position.X = 50.000000000000000000
+      Width = 400.000000000000000000
+    end
+  end
+  object Label3: TLabel
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 15.000000000000000000
+    Position.X = 72.000000000000000000
+    Position.Y = 512.000000000000000000
+    Text = 'Description:'
+    TextAlign = taTrailing
+    VertTextAlign = taTrailing
+    Width = 160.000000000000000000
+  end
+  object Label2: TLabel
+    Font.Size = 12.000000000000000000
+    FontColor = claRed
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 288.000000000000000000
+    Position.Y = 480.000000000000000000
+    Text = 'Class Codes Must be unique for each Color'
+    Width = 369.000000000000000000
+  end
+  object DataSource2: TDataSource
+    Left = 745
+    Top = 379
+  end
+  object DataSource1: TDataSource
+    Left = 828
+    Top = 377
+  end
+  object ADOQuery1: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from Colors where storeno = 1 order by Code')
+    Left = 328
+    Top = 152
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ADOQuery1
+    ScopeMappings = <>
+    Left = 440
+    Top = 320
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 364
+    Top = 21
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'CODE'
+      Control = Edit1
+      Track = False
+    end
+    object LinkGridToDataSource1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      AutoBufferCount = False
+      Columns = <
+        item
+          MemberName = 'CODE'
+          Width = 50
+        end
+        item
+          MemberName = 'ITEM'
+          Header = 'Color'
+        end>
+      DefaultColumnWidth = 400
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'ITEM'
+      Control = Edit10
+      Track = False
+    end
+  end
+end

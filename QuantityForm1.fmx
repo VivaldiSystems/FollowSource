@@ -1,0 +1,45 @@
+object QuantityForm: TQuantityForm
+  Left = 0
+  Top = 0
+  Caption = 'Item Details Window'
+  ClientHeight = 115
+  ClientWidth = 440
+  Position = poScreenCenter
+  StyleBook = GridViewForm.StyleBook2
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  OnShow = FormShow
+  object Edit1: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 80.000000000000000000
+    Position.Y = 48.000000000000000000
+    Width = 65.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Label1: TLabel
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 15.000000000000000000
+    Position.X = 72.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Enter the Lbs:'
+    Width = 305.000000000000000000
+  end
+  object Button1: TButton
+    Default = True
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 33.000000000000000000
+    Position.X = 280.000000000000000000
+    Position.Y = 72.000000000000000000
+    StyleLookup = 'flyoutbutton'
+    Text = 'OK'
+    Width = 129.000000000000000000
+    OnClick = Button1Click
+  end
+end

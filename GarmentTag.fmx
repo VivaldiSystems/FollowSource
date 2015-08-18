@@ -1,0 +1,329 @@
+object GarmentTagForm: TGarmentTagForm
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Garment Tag Search'
+  ClientHeight = 441
+  ClientWidth = 890
+  Fill.Kind = bkSolid
+  Position = poScreenCenter
+  StyleBook = MainMenuForm.StyleBook2
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  object Grid1: TGrid
+    Touch.InteractiveGestures = [igPan]
+    Height = 177.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 104.000000000000000000
+    Width = 825.000000000000000000
+    ReadOnly = True
+    RowCount = 0
+    RowHeight = 21.000000000000000000
+    object TStringColumn
+      Header = 'Tag 1'
+      Height = 152.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Tag 2'
+      Height = 152.000000000000000000
+      Position.X = 64.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Ticket #'
+      Height = 152.000000000000000000
+      Position.X = 128.000000000000000000
+      Width = 100.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Acct #'
+      Height = 152.000000000000000000
+      Position.X = 228.000000000000000000
+      Width = 120.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Name'
+      Height = 152.000000000000000000
+      Position.X = 348.000000000000000000
+      Width = 120.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Date In'
+      Height = 152.000000000000000000
+      Position.X = 468.000000000000000000
+      Width = 150.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Location'
+      Height = 152.000000000000000000
+      Position.X = 618.000000000000000000
+      Width = 120.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Status'
+      Height = 152.000000000000000000
+      Position.X = 738.000000000000000000
+      Width = 64.000000000000000000
+    end
+  end
+  object Edit1: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 144.000000000000000000
+    Position.Y = 16.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Edit2: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 144.000000000000000000
+    Position.Y = 56.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Button1: TButton
+    Default = True
+    DisableFocusEffect = False
+    Height = 33.000000000000000000
+    Position.X = 256.000000000000000000
+    Position.Y = 16.000000000000000000
+    Text = 'Search'
+    Width = 153.000000000000000000
+    OnClick = Button1Click
+  end
+  object CheckBox1: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    IsChecked = True
+    Position.X = 256.000000000000000000
+    Position.Y = 64.000000000000000000
+    Text = 'Only Show Ready and Inprocess Orders'
+    Width = 393.000000000000000000
+  end
+  object Label1: TLabel
+    Height = 15.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Ticket #:'
+    Width = 97.000000000000000000
+  end
+  object Label2: TLabel
+    Height = 15.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 64.000000000000000000
+    Text = 'Tag #:'
+    Width = 89.000000000000000000
+  end
+  object Button2: TButton
+    DisableFocusEffect = False
+    Height = 33.000000000000000000
+    Position.X = 696.000000000000000000
+    Position.Y = 392.000000000000000000
+    Text = 'Close'
+    Width = 161.000000000000000000
+    OnClick = Button2Click
+  end
+  object Label3: TLabel
+    Height = 15.000000000000000000
+    Position.X = 424.000000000000000000
+    Position.Y = 24.000000000000000000
+    Width = 353.000000000000000000
+  end
+  object Label4: TLabel
+    FontColor = claDarkblue
+    StyledSettings = [ssFamily, ssSize]
+    Height = 15.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 296.000000000000000000
+    Text = 'Update Tags for Selected Ticket'
+    Width = 329.000000000000000000
+  end
+  object Edit3: TEdit
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 40.000000000000000000
+    Position.Y = 320.000000000000000000
+    Width = 105.000000000000000000
+    Height = 25.000000000000000000
+  end
+  object Edit4: TEdit
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 152.000000000000000000
+    Position.Y = 320.000000000000000000
+    Width = 105.000000000000000000
+    Height = 25.000000000000000000
+  end
+  object Edit5: TEdit
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 264.000000000000000000
+    Position.Y = 320.000000000000000000
+    Width = 105.000000000000000000
+    Height = 25.000000000000000000
+  end
+  object Edit6: TEdit
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 376.000000000000000000
+    Position.Y = 320.000000000000000000
+    Width = 105.000000000000000000
+    Height = 25.000000000000000000
+  end
+  object Edit7: TEdit
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 488.000000000000000000
+    Position.Y = 320.000000000000000000
+    Width = 105.000000000000000000
+    Height = 25.000000000000000000
+  end
+  object Edit8: TEdit
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 600.000000000000000000
+    Position.Y = 320.000000000000000000
+    Width = 105.000000000000000000
+    Height = 25.000000000000000000
+  end
+  object Button3: TButton
+    DisableFocusEffect = False
+    Height = 33.000000000000000000
+    Position.X = 720.000000000000000000
+    Position.Y = 312.000000000000000000
+    Text = 'Save Tags'
+    Width = 137.000000000000000000
+    OnClick = Button3Click
+  end
+  object ADOQuery1: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select top 10 ID, ORDERNO, ACCT, NAME, DATEIN, LOCATION,'
+      ' STATUS, STORE, INVENTORYDATE,GARMARK, GARMARK1,'
+      'GARMARK2,GARMARK3,GARMARK4,GARMARK5'
+      ' from INVOICE where Store = '#39'1'#39)
+    Left = 656
+    Top = 56
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ADOQuery1
+    ScopeMappings = <>
+    Left = 560
+    Top = 56
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 20
+    Top = 5
+    object LinkGridToDataSource1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      AutoBufferCount = False
+      Columns = <
+        item
+          MemberName = 'GARMARK'
+          Header = 'Tag 1'
+        end
+        item
+          MemberName = 'GARMARK1'
+          Header = 'Tag 2'
+        end
+        item
+          MemberName = 'ORDERNO'
+          Header = 'Ticket #'
+          Width = 100
+        end
+        item
+          MemberName = 'ACCT'
+          Header = 'Acct #'
+          Width = 120
+        end
+        item
+          MemberName = 'NAME'
+          Header = 'Name'
+          Width = 120
+        end
+        item
+          MemberName = 'DATEIN'
+          Header = 'Date In'
+          Width = 150
+        end
+        item
+          MemberName = 'LOCATION'
+          Header = 'Location'
+          Width = 120
+        end
+        item
+          MemberName = 'STATUS'
+          Header = 'Status'
+        end>
+    end
+    object LinkPropertyToField1: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'GARMARK'
+      Component = Label3
+      ComponentProperty = 'Text'
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'GARMARK1'
+      Control = Edit4
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'GARMARK2'
+      Control = Edit5
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'GARMARK3'
+      Control = Edit6
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'GARMARK4'
+      Control = Edit7
+      Track = False
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'GARMARK5'
+      Control = Edit8
+      Track = False
+    end
+    object LinkControlToField6: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'GARMARK'
+      Control = Edit3
+      Track = False
+    end
+  end
+end

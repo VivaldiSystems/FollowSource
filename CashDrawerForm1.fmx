@@ -1,0 +1,365 @@
+object CashDrawerForm: TCashDrawerForm
+  Left = 0
+  Top = 0
+  Caption = 'Cash Drawer Window'
+  ClientHeight = 585
+  ClientWidth = 945
+  Fill.Kind = bkSolid
+  Position = poScreenCenter
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  OnShow = FormShow
+  object Button2: TButton
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 49.000000000000000000
+    Position.X = 744.000000000000000000
+    Position.Y = 467.000000000000000000
+    Text = 'Edit Drawer'
+    Width = 177.000000000000000000
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 49.000000000000000000
+    Position.X = 744.000000000000000000
+    Position.Y = 154.000000000000000000
+    Text = 'Z Out Drawer'
+    Width = 177.000000000000000000
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 46.000000000000000000
+    Position.X = 744.000000000000000000
+    Position.Y = 104.000000000000000000
+    Text = 'End of Day Report'
+    Width = 176.000000000000000000
+    OnClick = Button4Click
+  end
+  object Grid1: TGrid
+    Touch.InteractiveGestures = [igPan]
+    Height = 473.000000000000000000
+    PopupMenu = PopupMenu1
+    Position.X = 8.000000000000000000
+    Position.Y = 104.000000000000000000
+    Width = 673.000000000000000000
+    ReadOnly = True
+    RowCount = 0
+    RowHeight = 21.000000000000000000
+    object TStringColumn
+      Header = 'Ticket #'
+      Height = 448.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Account #'
+      Height = 448.000000000000000000
+      Position.X = 64.000000000000000000
+      Width = 85.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Name'
+      Height = 448.000000000000000000
+      Position.X = 149.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Date Out'
+      Height = 448.000000000000000000
+      Position.X = 213.000000000000000000
+      Width = 130.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Total'
+      Height = 448.000000000000000000
+      Position.X = 343.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Paid'
+      Height = 448.000000000000000000
+      Position.X = 407.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Client #'
+      Height = 448.000000000000000000
+      Position.X = 471.000000000000000000
+      Width = 50.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Type'
+      Height = 448.000000000000000000
+      Position.X = 521.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Starting'
+      Height = 448.000000000000000000
+      Position.X = 585.000000000000000000
+      Width = 64.000000000000000000
+    end
+  end
+  object Label1: TLabel
+    Height = 17.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 52.000000000000000000
+    Text = '#'
+    Width = 65.000000000000000000
+  end
+  object ComboEdit1: TComboEdit
+    Cursor = crIBeam
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    ItemHeight = 19.000000000000000000
+    ItemIndex = -1
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10')
+    Text = '1'
+    Position.X = 8.000000000000000000
+    Position.Y = 72.000000000000000000
+    Width = 65.000000000000000000
+    Height = 22.000000000000000000
+    OnChange = ComboEdit1Change
+  end
+  object Button6: TButton
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 49.000000000000000000
+    Position.X = 744.000000000000000000
+    Position.Y = 272.000000000000000000
+    Text = 'Start Cash'
+    Width = 177.000000000000000000
+    OnClick = Button6Click
+  end
+  object Edit1: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    FontColor = claWhite
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 824.000000000000000000
+    Position.Y = 328.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+    Enabled = False
+  end
+  object Label2: TLabel
+    Height = 22.000000000000000000
+    Position.X = 712.000000000000000000
+    Position.Y = 339.000000000000000000
+    Text = 'Starting:'
+    TextAlign = taTrailing
+    Width = 105.000000000000000000
+  end
+  object ComboEdit2: TComboEdit
+    Cursor = crIBeam
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    ItemHeight = 19.000000000000000000
+    ItemIndex = -1
+    Items.Strings = (
+      'ALL'
+      'STARTINGCASH'
+      'CREDITCARD'
+      'CHECK'
+      'CASH'
+      'ACCOUNT')
+    Text = 'ALL'
+    Position.X = 80.000000000000000000
+    Position.Y = 72.000000000000000000
+    Width = 233.000000000000000000
+    Height = 22.000000000000000000
+    OnChange = ComboEdit2Change
+  end
+  object Label3: TLabel
+    Height = 15.000000000000000000
+    Position.X = 80.000000000000000000
+    Position.Y = 56.000000000000000000
+    Text = 'Payment Type:'
+    Width = 120.000000000000000000
+  end
+  object Label4: TLabel
+    Height = 15.000000000000000000
+    Position.X = 336.000000000000000000
+    Position.Y = 56.000000000000000000
+    Text = 'Date Out:'
+    Width = 120.000000000000000000
+  end
+  object CalendarEdit1: TCalendarEdit
+    Cursor = crIBeam
+    Date = 41401.000000000000000000
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    Height = 22.000000000000000000
+    Position.X = 336.000000000000000000
+    Position.Y = 72.000000000000000000
+    TodayDefault = True
+    Width = 145.000000000000000000
+    OnChange = CalendarEdit1Change
+  end
+  object Button7: TButton
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 49.000000000000000000
+    Position.X = 744.000000000000000000
+    Position.Y = 216.000000000000000000
+    Text = 'Adjustment'
+    Width = 177.000000000000000000
+    OnClick = Button7Click
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 560
+    Top = 392
+    object MenuItem1: TMenuItem
+      Height = 50.000000000000000000
+      ShortCut = 121
+      Text = 'Open Drawer'
+      Width = 50.000000000000000000
+      OnClick = MenuItem1Click
+    end
+  end
+  object CheckBox1: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 488.000000000000000000
+    Position.Y = 72.000000000000000000
+    Text = 'All Days Activity'
+    Width = 185.000000000000000000
+    OnChange = CheckBox1Change
+  end
+  object Button8: TButton
+    DisableFocusEffect = False
+    Enabled = False
+    Height = 41.000000000000000000
+    Position.X = 744.000000000000000000
+    Position.Y = 416.000000000000000000
+    Text = 'Delete Record'
+    Width = 177.000000000000000000
+    OnClick = Button8Click
+  end
+  object ToolBar1: TToolBar
+    Height = 40.000000000000000000
+    Width = 945.000000000000000000
+    object Label5: TLabel
+      Font.Size = 28.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 36.000000000000000000
+      Position.X = 7.000000000000000000
+      Text = 'Cashdrawer Management'
+      Width = 394.000000000000000000
+    end
+    object SpeedButton3: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 700.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Save'
+      Width = 100.000000000000000000
+      OnClick = Button5Click
+    end
+    object SpeedButton4: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      Font.Style = [fsBold]
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 836.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Close'
+      Width = 100.000000000000000000
+      OnClick = Button1Click
+    end
+  end
+  object ADOQuery1: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select *,CONVERT(TIME(0),Dateout) AS HourMinuteSecond'
+      ' from Cashbox where storeno = 1')
+    Left = 504
+    Top = 208
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ADOQuery1
+    ScopeMappings = <>
+    Left = 352
+    Top = 192
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 116
+    Top = 245
+    object LinkGridToDataSource1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      AutoBufferCount = False
+      Columns = <
+        item
+          MemberName = 'ORDERNO'
+          Header = 'Ticket #'
+        end
+        item
+          MemberName = 'ACCT'
+          Header = 'Account #'
+          Width = 85
+        end
+        item
+          MemberName = 'NAME'
+          Header = 'Name'
+        end
+        item
+          MemberName = 'DATEOUT'
+          Header = 'Date Out'
+          Width = 130
+        end
+        item
+          MemberName = 'AMT'
+          Header = 'Total'
+        end
+        item
+          MemberName = 'AMTPAID'
+          Header = 'Paid'
+        end
+        item
+          MemberName = 'SLAVE'
+          Header = 'Client #'
+          Width = 50
+        end
+        item
+          MemberName = 'PAYMENTTYPE'
+          Header = 'Type'
+        end
+        item
+          MemberName = 'STARTINGCASH'
+          Header = 'Starting'
+        end>
+    end
+  end
+end

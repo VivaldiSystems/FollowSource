@@ -1,0 +1,395 @@
+object DashboardForm: TDashboardForm
+  Left = 0
+  Top = 0
+  Caption = 'Enterprise Dashboard'
+  ClientHeight = 709
+  ClientWidth = 935
+  Position = poScreenCenter
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  OnShow = FormShow
+  object Button10: TButton
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    Position.X = 408.000000000000000000
+    Position.Y = 232.000000000000000000
+    Text = 'Refresh Totals'
+    Width = 433.000000000000000000
+    OnClick = Button10Click
+  end
+  object ListBox1: TListBox
+    Touch.InteractiveGestures = [igPan]
+    Height = 497.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 64.000000000000000000
+    Width = 209.000000000000000000
+    OnChange = ListBox1Change
+  end
+  object ProgressBar1: TProgressBar
+    Height = 20.000000000000000000
+    Max = 10.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 296.000000000000000000
+    Position.Y = 472.000000000000000000
+    Width = 609.000000000000000000
+  end
+  object CheckBox1: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 40.000000000000000000
+    Text = 'Show Enterprise Totals'
+    Width = 257.000000000000000000
+  end
+  object Button12: TButton
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    Position.X = 328.000000000000000000
+    Position.Y = 272.000000000000000000
+    Text = 'Ticket Listing'
+    Width = 281.000000000000000000
+    OnClick = Button12Click
+  end
+  object Button13: TButton
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    Position.X = 328.000000000000000000
+    Position.Y = 312.000000000000000000
+    Text = 'Class Sales Summary'
+    Width = 281.000000000000000000
+    OnClick = Button13Click
+  end
+  object Button14: TButton
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    Position.X = 328.000000000000000000
+    Position.Y = 352.000000000000000000
+    Text = 'Class Cash Summary Report'
+    Width = 281.000000000000000000
+    OnClick = Button14Click
+  end
+  object Button15: TButton
+    DisableFocusEffect = False
+    Height = 22.000000000000000000
+    Position.X = 328.000000000000000000
+    Position.Y = 392.000000000000000000
+    Text = 'Ticket Sales Summary'
+    Width = 281.000000000000000000
+    OnClick = Button15Click
+  end
+  object Label7: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 12.000000000000000000
+    Position.X = 248.000000000000000000
+    Position.Y = 91.000000000000000000
+    Text = '0 Value Tickets:'
+    TextAlign = taTrailing
+    Width = 217.000000000000000000
+  end
+  object Label6: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 11.000000000000000000
+    Position.X = 336.000000000000000000
+    Position.Y = 74.000000000000000000
+    Text = 'Picked Up:'
+    TextAlign = taTrailing
+    Width = 129.000000000000000000
+  end
+  object Label8: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 12.000000000000000000
+    Position.X = 248.000000000000000000
+    Position.Y = 107.000000000000000000
+    Text = 'Tickets being Processed:'
+    TextAlign = taTrailing
+    Width = 217.000000000000000000
+  end
+  object Label9: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 12.000000000000000000
+    Position.X = 248.000000000000000000
+    Position.Y = 124.000000000000000000
+    Text = 'Items being Processed:'
+    TextAlign = taTrailing
+    Width = 217.000000000000000000
+  end
+  object Label10: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 12.000000000000000000
+    Position.X = 248.000000000000000000
+    Position.Y = 140.000000000000000000
+    Text = 'Tickets Over Due:'
+    TextAlign = taTrailing
+    Width = 217.000000000000000000
+  end
+  object Label11: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 12.000000000000000000
+    Position.X = 248.000000000000000000
+    Position.Y = 158.000000000000000000
+    Text = 'Items Over Due:'
+    TextAlign = taTrailing
+    Width = 217.000000000000000000
+  end
+  object Label15: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 12.000000000000000000
+    Position.X = 248.000000000000000000
+    Position.Y = 176.000000000000000000
+    Text = 'Tickets Ready for Pickup:'
+    TextAlign = taTrailing
+    Width = 217.000000000000000000
+  end
+  object Label16: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 12.000000000000000000
+    Position.X = 248.000000000000000000
+    Position.Y = 193.000000000000000000
+    Text = 'Quick Tickets:'
+    TextAlign = taTrailing
+    Width = 217.000000000000000000
+  end
+  object Label17: TLabel
+    Font.Size = 10.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 12.000000000000000000
+    Position.X = 240.000000000000000000
+    Position.Y = 209.000000000000000000
+    Text = 'Total Tickets Created Today:'
+    TextAlign = taTrailing
+    Width = 225.000000000000000000
+  end
+  object ProgressBarPickedUp: TProgressBar
+    Height = 9.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 76.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object ProgressBarZero: TProgressBar
+    Height = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 91.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object ProgressBarTicketInprocess: TProgressBar
+    Height = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 109.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object ProgressBarItemsInprocess: TProgressBar
+    Height = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 126.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object ProgressBarTicketsOverdue: TProgressBar
+    Height = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 142.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object ProgressBarItemsOverdue: TProgressBar
+    Height = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 160.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object ProgressBarReady: TProgressBar
+    Height = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 178.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object ProgressBarQuick: TProgressBar
+    Height = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 195.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object ProgressBarTransactions: TProgressBar
+    Height = 10.000000000000000000
+    Max = 1000.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 508.000000000000000000
+    Position.Y = 211.000000000000000000
+    Width = 337.000000000000000000
+  end
+  object TodayCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 848.000000000000000000
+    Position.Y = 190.000000000000000000
+    Text = '0'
+    Width = 73.000000000000000000
+  end
+  object QuickCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 848.000000000000000000
+    Position.Y = 206.000000000000000000
+    Text = '0'
+    Width = 81.000000000000000000
+  end
+  object ReadyCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 848.000000000000000000
+    Position.Y = 176.000000000000000000
+    Text = '0'
+    Width = 73.000000000000000000
+  end
+  object ItemsOverDueCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 848.000000000000000000
+    Position.Y = 158.000000000000000000
+    Text = '0'
+    Width = 73.000000000000000000
+  end
+  object OverDueCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 848.000000000000000000
+    Position.Y = 140.000000000000000000
+    Text = '0'
+    Width = 73.000000000000000000
+  end
+  object ItemsProcessedCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 848.000000000000000000
+    Position.Y = 124.000000000000000000
+    Text = '0'
+    Width = 73.000000000000000000
+  end
+  object ProcessedCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 848.000000000000000000
+    Position.Y = 107.000000000000000000
+    Text = '0'
+    Width = 81.000000000000000000
+  end
+  object ZeroCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 14.000000000000000000
+    Position.X = 849.000000000000000000
+    Position.Y = 90.000000000000000000
+    Text = '0'
+    Width = 57.000000000000000000
+  end
+  object PickupCount: TLabel
+    Font.Size = 10.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily]
+    Height = 13.000000000000000000
+    Position.X = 848.000000000000000000
+    Position.Y = 74.000000000000000000
+    Text = '0'
+    Width = 57.000000000000000000
+  end
+  object ToolBar1: TToolBar
+    Height = 40.000000000000000000
+    Width = 935.000000000000000000
+    object Label1: TLabel
+      Font.Size = 28.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 36.000000000000000000
+      Position.X = 7.000000000000000000
+      Text = 'Enterprise Dashboard'
+      Width = 506.000000000000000000
+    end
+    object SpeedButton4: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      Font.Style = [fsBold]
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 826.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Close'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton4Click
+    end
+  end
+  object ADOQuery2: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    Parameters = <>
+    Left = 728
+    Top = 344
+  end
+  object ADOQuery1: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select * from STORE ')
+    Left = 472
+    Top = 472
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ADOQuery1
+    ScopeMappings = <>
+    Left = 384
+    Top = 568
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 268
+    Top = 565
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = ListBox1
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'NAME'
+      AutoFill = True
+      BufferCount = -1
+      FillExpressions = <>
+    end
+  end
+end

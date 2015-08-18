@@ -1,0 +1,38 @@
+object FM_PopupMessage01: TFM_PopupMessage01
+  StyleName = 'backgroundstyle'
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Message'
+  ClientHeight = 138
+  ClientWidth = 648
+  Position = poScreenCenter
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  OnShow = FormShow
+  object Label1: TLabel
+    Font.Size = 36.000000000000000000
+    FontColor = claDarkslategray
+    StyledSettings = [ssFamily]
+    Height = 49.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 32.000000000000000000
+    Text = 'Preparing Ticket.  Please Wait...'
+    Width = 617.000000000000000000
+  end
+  object ColorAnimation1: TColorAnimation
+    Duration = 0.200000002980232200
+    PropertyName = 'Fill.Color'
+    StartValue = claWhite
+    StopValue = claNull
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = Timer1Timer
+    Left = 600
+    Top = 48
+  end
+end

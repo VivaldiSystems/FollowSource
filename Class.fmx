@@ -1,0 +1,344 @@
+object ClassForm: TClassForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biHelp]
+  BorderStyle = bsSingle
+  Caption = 'Class Management'
+  ClientHeight = 660
+  ClientWidth = 901
+  Fill.Kind = bkSolid
+  Position = poScreenCenter
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  object ToolBar1: TToolBar
+    Height = 40.000000000000000000
+    Width = 901.000000000000000000
+    object Label1: TLabel
+      Font.Size = 28.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 36.000000000000000000
+      Position.X = 7.000000000000000000
+      Text = 'Class Management'
+      Width = 265.000000000000000000
+    end
+    object SpeedButton1: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 416.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Add'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 528.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Remove'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton2Click
+    end
+    object SpeedButton3: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 656.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Save'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton3Click
+    end
+    object SpeedButton4: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      Font.Style = [fsBold]
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 792.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Close'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton4Click
+    end
+  end
+  object ItemTitle2: TLabel
+    Anchors = []
+    AutoSize = True
+    Font.Family = 'Arial'
+    Font.Size = 18.000000000000000000
+    Font.Style = [fsBold]
+    FontColor = claNull
+    StyledSettings = [ssFontColor]
+    Height = 25.000000000000000000
+    Padding.Top = 5.000000000000000000
+    Position.X = 122.000000000000000000
+    Position.Y = 392.000000000000000000
+    Text = 'Class Code:'
+    TextAlign = taTrailing
+    Width = 108.000000000000000000
+    WordWrap = False
+  end
+  object Edit6: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 248.000000000000000000
+    Position.Y = 504.000000000000000000
+    Width = 73.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object CheckBox1: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 248.000000000000000000
+    Position.Y = 472.000000000000000000
+    Text = 'Taxable'
+    Width = 120.000000000000000000
+  end
+  object Edit10: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 248.000000000000000000
+    Position.Y = 424.000000000000000000
+    Width = 481.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Edit1: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 248.000000000000000000
+    Position.Y = 384.000000000000000000
+    Width = 33.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object CheckBox2: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 368.000000000000000000
+    Position.Y = 472.000000000000000000
+    Text = 'Environmental Fee Applies'
+    Width = 209.000000000000000000
+  end
+  object CheckBox4: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 368.000000000000000000
+    Position.Y = 512.000000000000000000
+    Text = 'Don'#39't Print a Ticket'
+    Width = 137.000000000000000000
+  end
+  object CheckBox5: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 600.000000000000000000
+    Position.Y = 512.000000000000000000
+    Text = 'Do not Print Tags'
+    Width = 120.000000000000000000
+  end
+  object CheckBox3: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 600.000000000000000000
+    Position.Y = 472.000000000000000000
+    Text = 'Popup Scan Code'
+    Width = 120.000000000000000000
+  end
+  object Grid1: TGrid
+    Touch.InteractiveGestures = [igPan]
+    Height = 313.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 56.000000000000000000
+    Width = 865.000000000000000000
+    ReadOnly = True
+    RowCount = 0
+    RowHeight = 21.000000000000000000
+    object TStringColumn
+      Header = 'CODE'
+      Height = 272.000000000000000000
+      Width = 50.000000000000000000
+    end
+    object TStringColumn
+      Header = 'CLASS'
+      Height = 272.000000000000000000
+      Position.X = 50.000000000000000000
+      Width = 400.000000000000000000
+    end
+    object TCheckColumn
+      Header = 'TAX'
+      Height = 272.000000000000000000
+      Position.X = 450.000000000000000000
+      Width = 35.000000000000000000
+    end
+    object TCheckColumn
+      Header = 'ENVIRONMENTAL'
+      Height = 272.000000000000000000
+      Position.X = 485.000000000000000000
+      Width = 100.000000000000000000
+    end
+    object TCheckColumn
+      Header = 'NOTAGS'
+      Height = 272.000000000000000000
+      Position.X = 585.000000000000000000
+      Width = 400.000000000000000000
+    end
+  end
+  object Label3: TLabel
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 15.000000000000000000
+    Position.X = 72.000000000000000000
+    Position.Y = 432.000000000000000000
+    Text = 'Description:'
+    TextAlign = taTrailing
+    VertTextAlign = taTrailing
+    Width = 160.000000000000000000
+  end
+  object Label4: TLabel
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 15.000000000000000000
+    Position.X = 72.000000000000000000
+    Position.Y = 520.000000000000000000
+    Text = 'Max Items:'
+    TextAlign = taTrailing
+    VertTextAlign = taTrailing
+    Width = 160.000000000000000000
+  end
+  object Label2: TLabel
+    Font.Size = 12.000000000000000000
+    FontColor = claRed
+    StyledSettings = [ssFamily]
+    Height = 15.000000000000000000
+    Position.X = 288.000000000000000000
+    Position.Y = 400.000000000000000000
+    Text = 'Class Codes Must be unique for each Class'
+    Width = 369.000000000000000000
+  end
+  object DataSource2: TDataSource
+    Left = 673
+    Top = 331
+  end
+  object DataSource1: TDataSource
+    Left = 684
+    Top = 377
+  end
+  object ADOQuery1: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from Class where store = 1 order by Code')
+    Left = 328
+    Top = 152
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ADOQuery1
+    ScopeMappings = <>
+    Left = 440
+    Top = 320
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'CODE'
+      Control = Edit1
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'CLASS'
+      Control = Edit10
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'MAXITEM'
+      Control = Edit6
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'TAX'
+      Control = CheckBox1
+      Track = True
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'AUTOPOPUPSCANCODE'
+      Control = CheckBox3
+      Track = True
+    end
+    object LinkControlToField6: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'ENVIRONMENTAL'
+      Control = CheckBox2
+      Track = True
+    end
+    object LinkControlToField7: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'NORECEIPT'
+      Control = CheckBox4
+      Track = True
+    end
+    object LinkControlToField8: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'NOTAGS'
+      Control = CheckBox5
+      Track = True
+    end
+    object LinkGridToDataSource1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      AutoBufferCount = False
+      Columns = <
+        item
+          MemberName = 'CODE'
+          Width = 50
+        end
+        item
+          MemberName = 'CLASS'
+        end
+        item
+          MemberName = 'TAX'
+          Width = 35
+          ColumnStyle = 'CheckColumn'
+        end
+        item
+          MemberName = 'ENVIRONMENTAL'
+          Width = 100
+          ColumnStyle = 'CheckColumn'
+        end
+        item
+          MemberName = 'NOTAGS'
+          ColumnStyle = 'CheckColumn'
+        end>
+      DefaultColumnWidth = 400
+    end
+  end
+end

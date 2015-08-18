@@ -1,0 +1,48 @@
+object QuestionForm: TQuestionForm
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Question'
+  ClientHeight = 167
+  ClientWidth = 477
+  Position = poScreenCenter
+  StyleBook = GridViewForm.StyleBook2
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  object Label1: TLabel
+    Font.Size = 14.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 73.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Question Text'
+    Width = 449.000000000000000000
+  end
+  object Button1: TButton
+    DisableFocusEffect = False
+    Font.Size = 14.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 30.000000000000000000
+    Position.X = 256.000000000000000000
+    Position.Y = 120.000000000000000000
+    StyleLookup = 'flyoutbutton'
+    Text = 'OK'
+    Width = 97.000000000000000000
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    DisableFocusEffect = False
+    Font.Size = 14.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 30.000000000000000000
+    Position.X = 368.000000000000000000
+    Position.Y = 120.000000000000000000
+    StyleLookup = 'flyoutbutton'
+    Text = 'Cancel'
+    Width = 97.000000000000000000
+    WordWrap = True
+    OnClick = Button2Click
+  end
+end

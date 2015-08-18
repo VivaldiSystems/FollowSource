@@ -1,0 +1,43 @@
+object FM_DATEPICKER: TFM_DATEPICKER
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Calendar Selector'
+  ClientHeight = 337
+  ClientWidth = 389
+  Position = poScreenCenter
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  object Calendar1: TCalendar
+    ClipChildren = False
+    Date = 42108.000000000000000000
+    Height = 164.000000000000000000
+    Position.X = 104.000000000000000000
+    Position.Y = 72.000000000000000000
+    TodayDefault = True
+    Width = 182.000000000000000000
+    OnDateSelected = Calendar1DateSelected
+  end
+  object Label1: TLabel
+    Font.Size = 18.000000000000000000
+    Font.Style = [fsBold]
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 17.000000000000000000
+    Position.X = 95.000000000000000000
+    Position.Y = 30.000000000000000000
+    Text = 'Pickup\Delivery Date:'
+    Width = 218.000000000000000000
+  end
+  object Button1: TButton
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 41.000000000000000000
+    Position.X = 208.000000000000000000
+    Position.Y = 280.000000000000000000
+    Text = 'Select'
+    Width = 153.000000000000000000
+    OnClick = Button1Click
+  end
+end

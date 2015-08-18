@@ -1,0 +1,358 @@
+object AssignLocationForm: TAssignLocationForm
+  Left = 0
+  Top = 0
+  Caption = 'Assign Location'
+  ClientHeight = 622
+  ClientWidth = 1010
+  Fill.Kind = bkSolid
+  Position = poScreenCenter
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  OnShow = FormShow
+  object Label1: TLabel
+    Font.Size = 14.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 25.000000000000000000
+    Position.X = 32.000000000000000000
+    Position.Y = 72.000000000000000000
+    Text = 'Ticket #:'
+    TextAlign = taTrailing
+    Width = 89.000000000000000000
+  end
+  object Label2: TLabel
+    Font.Size = 14.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 33.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 107.000000000000000000
+    Text = 'Location:'
+    TextAlign = taTrailing
+    Width = 97.000000000000000000
+  end
+  object Edit1: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 128.000000000000000000
+    Position.Y = 72.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Edit2: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 128.000000000000000000
+    Position.Y = 112.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Button1: TButton
+    DisableFocusEffect = False
+    Font.Size = 20.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 33.000000000000000000
+    Position.X = 240.000000000000000000
+    Position.Y = 112.000000000000000000
+    StyleLookup = 'flyoutbutton'
+    Text = 'Assign Location'
+    Width = 193.000000000000000000
+    OnClick = Button1Click
+  end
+  object Grid1: TGrid
+    Touch.InteractiveGestures = [igPan]
+    Height = 193.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 160.000000000000000000
+    Width = 977.000000000000000000
+    ReadOnly = True
+    RowCount = 0
+    RowHeight = 21.000000000000000000
+    object TStringColumn
+      Header = 'Ticket #'
+      Height = 168.000000000000000000
+      Width = 85.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Account #'
+      Height = 168.000000000000000000
+      Position.X = 85.000000000000000000
+      Width = 85.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Name'
+      Height = 168.000000000000000000
+      Position.X = 170.000000000000000000
+      Width = 140.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Date In'
+      Height = 168.000000000000000000
+      Position.X = 310.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Status'
+      Height = 168.000000000000000000
+      Position.X = 374.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Location'
+      Height = 168.000000000000000000
+      Position.X = 438.000000000000000000
+      Width = 150.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Pickup/Delivery'
+      Height = 168.000000000000000000
+      Position.X = 588.000000000000000000
+      Width = 100.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Pieces'
+      Height = 168.000000000000000000
+      Position.X = 688.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Total'
+      Height = 168.000000000000000000
+      Position.X = 752.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Paid'
+      Height = 168.000000000000000000
+      Position.X = 816.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Route'
+      Height = 168.000000000000000000
+      Position.X = 880.000000000000000000
+      Width = 64.000000000000000000
+    end
+  end
+  object Button3: TButton
+    DisableFocusEffect = False
+    Font.Size = 20.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 33.000000000000000000
+    Position.X = 736.000000000000000000
+    Position.Y = 112.000000000000000000
+    Text = 'Mark Ticket Ready'
+    Visible = False
+    Width = 193.000000000000000000
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Default = True
+    DisableFocusEffect = False
+    Font.Size = 20.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 41.000000000000000000
+    Position.X = 240.000000000000000000
+    Position.Y = 64.000000000000000000
+    StyleLookup = 'flyoutbutton'
+    Text = 'Search'
+    Width = 193.000000000000000000
+    OnClick = Button4Click
+  end
+  object Label3: TLabel
+    Font.Size = 20.000000000000000000
+    StyledSettings = [ssFamily]
+    Height = 25.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 584.000000000000000000
+    Text = 'Enter the Ticket to Assign'
+    Width = 417.000000000000000000
+  end
+  object CheckBox1: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 456.000000000000000000
+    Position.Y = 56.000000000000000000
+    Text = 'Send Emails'
+    Width = 209.000000000000000000
+  end
+  object Label4: TLabel
+    FontColor = claCrimson
+    StyledSettings = [ssFamily, ssSize]
+    Height = 15.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 560.000000000000000000
+    Text = 'Status'
+    Width = 425.000000000000000000
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [igPan]
+    Height = 185.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 360.000000000000000000
+    Width = 969.000000000000000000
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+  end
+  object Button5: TButton
+    DisableFocusEffect = False
+    Height = 33.000000000000000000
+    Position.X = 448.000000000000000000
+    Position.Y = 112.000000000000000000
+    Text = 'Assign to Plant'
+    Width = 129.000000000000000000
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    DisableFocusEffect = False
+    Height = 33.000000000000000000
+    Position.X = 592.000000000000000000
+    Position.Y = 112.000000000000000000
+    Text = 'Assign to Alteration'
+    Width = 137.000000000000000000
+    OnClick = Button6Click
+  end
+  object CheckBox2: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 456.000000000000000000
+    Position.Y = 80.000000000000000000
+    Text = 'Don'#39't Mark the Location Ready'
+    Width = 289.000000000000000000
+  end
+  object ToolBar1: TToolBar
+    Height = 40.000000000000000000
+    Width = 1010.000000000000000000
+    object Label5: TLabel
+      Font.Size = 28.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 36.000000000000000000
+      Position.X = 7.000000000000000000
+      Text = 'Assign Location'
+      Width = 265.000000000000000000
+    end
+    object SpeedButton4: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      Font.Style = [fsBold]
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 901.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Close'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton4Click
+    end
+  end
+  object ADOQuery1: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    Parameters = <>
+    SQL.Strings = (
+      'Select TOP 100 ID, ORDERNO, ACCT, NAME, DATEIN, LOCATION,'
+      ' STATUS, STORE '
+      'FROM INVOICE'
+      'WHERE STORE = 1'
+      ' ORDER BY ORDERNO')
+    Left = 120
+    Top = 320
+  end
+  object ADOQuery2: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select TOP 100 ID, ORDERNO, ACCT, NAME, DATEIN,DATEOUT,'
+      'ROUTE,AMT,AMTPAID,QTY, LOCATION, STATUS, STORE '
+      'FROM INVOICE'
+      'WHERE STORE = 1'
+      ' ORDER BY ORDERNO')
+    Left = 400
+    Top = 368
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ADOQuery2
+    ScopeMappings = <>
+    Left = 328
+    Top = 200
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 20
+    Top = 5
+    object LinkGridToDataSource1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      AutoBufferCount = False
+      Columns = <
+        item
+          MemberName = 'ORDERNO'
+          Header = 'Ticket #'
+          Width = 85
+        end
+        item
+          MemberName = 'ACCT'
+          Header = 'Account #'
+          Width = 85
+        end
+        item
+          MemberName = 'NAME'
+          Header = 'Name'
+          Width = 140
+        end
+        item
+          MemberName = 'DATEIN'
+          Header = 'Date In'
+        end
+        item
+          MemberName = 'STATUS'
+          Header = 'Status'
+        end
+        item
+          MemberName = 'LOCATION'
+          Header = 'Location'
+          Width = 150
+        end
+        item
+          MemberName = 'DATEOUT'
+          Header = 'Pickup/Delivery'
+          Width = 100
+        end
+        item
+          MemberName = 'QTY'
+          Header = 'Pieces'
+        end
+        item
+          MemberName = 'AMT'
+          Header = 'Total'
+        end
+        item
+          MemberName = 'AMTPAID'
+          Header = 'Paid'
+        end
+        item
+          MemberName = 'ROUTE'
+          Header = 'Route'
+        end>
+    end
+  end
+  object ADOQuery3: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM INVOICEHISTORY WHERE ID = -1')
+    Left = 319
+    Top = 367
+  end
+  object ADOQuery4: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    Parameters = <>
+    Left = 512
+    Top = 279
+  end
+end

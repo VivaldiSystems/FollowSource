@@ -1,0 +1,285 @@
+object MarkForm: TMarkForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biHelp]
+  BorderStyle = bsSingle
+  Caption = 'Mark Tickets Ready'
+  ClientHeight = 582
+  ClientWidth = 782
+  Fill.Kind = bkSolid
+  Position = poScreenCenter
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  OnShow = FormShow
+  object ToolBar1: TToolBar
+    Height = 40.000000000000000000
+    Width = 782.000000000000000000
+    object Label1: TLabel
+      Font.Size = 28.000000000000000000
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 36.000000000000000000
+      Position.X = 7.000000000000000000
+      Text = 'Mark Tickets Ready'
+      Width = 265.000000000000000000
+    end
+    object SpeedButton4: TSpeedButton
+      Anchors = [akTop, akRight]
+      Font.Size = 22.000000000000000000
+      Font.Style = [fsBold]
+      StyledSettings = [ssFamily, ssFontColor]
+      Height = 28.000000000000000000
+      Position.X = 673.000000000000000000
+      Position.Y = 6.000000000000000000
+      Text = 'Close'
+      Width = 100.000000000000000000
+      OnClick = SpeedButton4Click
+    end
+  end
+  object Grid1: TGrid
+    Touch.InteractiveGestures = [igPan]
+    Height = 169.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 216.000000000000000000
+    Width = 761.000000000000000000
+    RowCount = 0
+    RowHeight = 21.000000000000000000
+    object TStringColumn
+      Header = 'Ticket #'
+      Height = 144.000000000000000000
+      Width = 85.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Account #'
+      Height = 144.000000000000000000
+      Position.X = 85.000000000000000000
+      Width = 85.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Name'
+      Height = 144.000000000000000000
+      Position.X = 170.000000000000000000
+      Width = 140.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Date In'
+      Height = 144.000000000000000000
+      Position.X = 310.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Status'
+      Height = 144.000000000000000000
+      Position.X = 374.000000000000000000
+      Width = 64.000000000000000000
+    end
+    object TStringColumn
+      Header = 'Location'
+      Height = 144.000000000000000000
+      Position.X = 438.000000000000000000
+      Width = 150.000000000000000000
+    end
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [igPan]
+    Height = 161.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 392.000000000000000000
+    Width = 761.000000000000000000
+    DisableFocusEffect = False
+    KeyboardType = vktDefault
+    Font.Size = 12.000000000000000000
+  end
+  object Edit1: TEdit
+    TabOrder = 0
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 24.000000000000000000
+    Position.Y = 96.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+  end
+  object Button3: TButton
+    Default = True
+    DisableFocusEffect = False
+    Font.Size = 20.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 40.000000000000000000
+    Position.X = 178.000000000000000000
+    Position.Y = 90.000000000000000000
+    TabOrder = 1
+    Text = 'Mark Ticket Ready'
+    Width = 193.000000000000000000
+    OnClick = Button3Click
+  end
+  object CheckBox4: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 64.000000000000000000
+    Position.Y = 136.000000000000000000
+    Text = 'Assign to Plant'
+    Width = 120.000000000000000000
+  end
+  object CheckBox5: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 184.000000000000000000
+    Position.Y = 136.000000000000000000
+    Text = 'Assign to Alteration'
+    Width = 137.000000000000000000
+  end
+  object CheckBox1: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 496.000000000000000000
+    Position.Y = 64.000000000000000000
+    Text = 'Send Email'
+    Width = 113.000000000000000000
+  end
+  object CheckBox2: TCheckBox
+    DisableFocusEffect = False
+    Height = 19.000000000000000000
+    Position.X = 632.000000000000000000
+    Position.Y = 64.000000000000000000
+    Text = 'Send Delivery Email'
+    Width = 137.000000000000000000
+  end
+  object Label2: TLabel
+    Font.Size = 14.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 33.000000000000000000
+    Position.X = 64.000000000000000000
+    Position.Y = 171.000000000000000000
+    Text = 'Location:'
+    TextAlign = taTrailing
+    Visible = False
+    Width = 97.000000000000000000
+  end
+  object Edit2: TEdit
+    DisableFocusEffect = False
+    Font.Size = 16.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Position.X = 176.000000000000000000
+    Position.Y = 168.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+    Visible = False
+  end
+  object Label3: TLabel
+    Font.Size = 14.000000000000000000
+    FontColor = claRed
+    StyledSettings = [ssFamily]
+    Height = 25.000000000000000000
+    Position.X = 24.000000000000000000
+    Position.Y = 56.000000000000000000
+    Text = 'Enter Ticket # to Mark Ready'
+    Width = 409.000000000000000000
+  end
+  object Label5: TLabel
+    Height = 15.000000000000000000
+    Position.X = 360.000000000000000000
+    Position.Y = 136.000000000000000000
+    Text = 'No Email is sent for Plant or Alteration'
+    Width = 329.000000000000000000
+  end
+  object Label4: TLabel
+    Font.Size = 14.000000000000000000
+    StyledSettings = [ssFamily, ssFontColor]
+    Height = 15.000000000000000000
+    Position.X = 360.000000000000000000
+    Position.Y = 176.000000000000000000
+    Text = 'Message:'
+    Width = 409.000000000000000000
+  end
+  object DataSource2: TDataSource
+    Left = 689
+    Top = 147
+  end
+  object DataSource1: TDataSource
+    Left = 588
+    Top = 161
+  end
+  object BindSourceDB1: TBindSourceDB
+    ScopeMappings = <>
+    Left = 648
+    Top = 120
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 20
+    Top = 5
+    object LinkGridToDataSource1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      AutoBufferCount = False
+      Columns = <
+        item
+          MemberName = 'CODE'
+          Width = 50
+        end
+        item
+          MemberName = 'CLASS'
+        end
+        item
+          MemberName = 'TAX'
+          Width = 35
+          ColumnStyle = 'CheckColumn'
+        end
+        item
+          MemberName = 'ENVIRONMENTAL'
+          Width = 100
+          ColumnStyle = 'CheckColumn'
+        end
+        item
+          MemberName = 'NOTAGS'
+          ColumnStyle = 'CheckColumn'
+        end>
+      DefaultColumnWidth = 400
+    end
+  end
+  object ADOQuery1: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select TOP 100 ID, ORDERNO, ACCT, NAME, DATEIN, LOCATION,'
+      ' STATUS, STORE , INVENTORYDATE'
+      'FROM INVOICE'
+      'WHERE STORE = 1'
+      ' ORDER BY ORDERNO')
+    Left = 400
+    Top = 488
+  end
+  object ADOQuery2: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'Select TOP 100 ID, ORDERNO, ACCT, NAME, DATEIN, LOCATION,'
+      ' STATUS, STORE '
+      'FROM INVOICE'
+      'WHERE STORE = 1'
+      ' ORDER BY ORDERNO')
+    Left = 528
+    Top = 496
+  end
+  object ADOQuery3: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM INVOICEHISTORY WHERE ID = -1')
+    Left = 640
+    Top = 472
+  end
+  object ADOQuery4: TADOQuery
+    Connection = MainMenuForm.ADOConnection1
+    Parameters = <>
+    Left = 688
+    Top = 431
+  end
+end

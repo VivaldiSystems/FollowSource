@@ -1,0 +1,15 @@
+﻿[GridViewForm.ADOQuery3]
+Visible=False
+
+[Button2]
+Coordinates=0,0,53,51
+
+[Button1]
+Coordinates=72,1,53,51
+
+[Label1]
+Coordinates=53,70,46,51
+
+[MainMenuForm.ADOQuery2]
+Coordinates=144,1,151,51
+
