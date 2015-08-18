@@ -28,7 +28,7 @@ void __fastcall TLoginForm02::Button1Click(TObject *Sender)
 	if( ADOQuery1->Eof )
 	{
 
-		ShowMessage("Incorrect Password! (Please Reenter.)");
+		ShowMessage("Incorrect Password! (Please Reenter)");
 		Edit2->Text = "";
 	    Edit2->SetFocus();
 		ADOQuery1->Active = false;
